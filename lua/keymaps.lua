@@ -12,10 +12,10 @@ vim.keymap.set('n', 'L', '$', { noremap = true })
 vim.keymap.set('c', '<C-p>', '<C-r>0', { noremap = true })
 
 -- Copy/Paste with system clipboard
-vim.keymap.set({'n', 'v'}, '<C-c>', '"+y', { noremap = true })
-vim.keymap.set('n', '<C-v>', '"+p', { noremap = true })
-vim.keymap.set('i', '<C-v>', '<Esc>"+pgaa', { noremap = true })
-vim.keymap.set('c', '<C-v>', '<C-r>+', { noremap = true })
+vim.keymap.set({'n', 'v'}, '<C-c>', '"*y', { noremap = true })
+vim.keymap.set('n', '<C-v>', '"*p', { noremap = true })
+vim.keymap.set('i', '<C-v>', '<Esc>"*pgaa', { noremap = true })
+vim.keymap.set('c', '<C-v>', '<C-r>*', { noremap = true })
 
 -- Case conversion
 vim.keymap.set('n', '<Leader>cs', ':s/\\(\\<\\u\\l\\+\\|\\l\\+\\)\\(\\u\\)/\\l\\1_\\l\\2/g<CR>', { noremap = true })
