@@ -30,24 +30,7 @@ vim.keymap.set('n', '<Leader><Leader>d', '\"=strftime("%Y-%m-%d %A")<CR>Po', { n
 -- Motion (Hop as EasyMotion replacement)
 vim.keymap.set('n', 'gs', function() require('hop').hint_char1() end, { noremap = true })
 
--- Git commands (commented out as in .vimrc)
--- vim.api.nvim_create_user_command('Ga', 'Git add .', {})
--- vim.api.nvim_create_user_command('Gc', 'Git commit --allow-empty-message --no-edit', {})
--- vim.api.nvim_create_user_command('Gp', 'Git push', {})
--- vim.api.nvim_create_user_command('Gs', 'Git status', {})
-
 -- Session options
 vim.opt.sessionoptions:remove('options')
 vim.opt.sessionoptions:append({'unix', 'slash'})
 
--- GUI settings
-if vim.fn.has('gui_running') == 1 then
-  if vim.fn.has('gui_win32') == 1 then
-    vim.opt.guifont = 'Courier_New:h12:cANSI'
-    vim.opt.guitablabel = '%N\\ %t'
-  end
-end
-
--- EasyAlign mappings
-vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)', {})
-vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)', {}) 
