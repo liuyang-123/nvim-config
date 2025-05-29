@@ -5,8 +5,8 @@ vim.g.mapleader = "\\"
 
 -- Normal mode mappings
 vim.keymap.set('n', '<Leader><Leader>v', '<C-v>', { noremap = true })
-vim.keymap.set('n', 'H', '^', { noremap = true })
-vim.keymap.set('n', 'L', '$', { noremap = true })
+vim.keymap.set({'n', 'o'}, 'H', '^', { noremap = true })
+vim.keymap.set({'n', 'o'}, 'L', '$', { noremap = true })
 
 -- Command mode mappings
 vim.keymap.set('c', '<C-p>', '<C-r>0', { noremap = true })
